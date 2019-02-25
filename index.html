@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Editor</title>
+    <link href="https://fonts.googleapis.com/css?family=Thasadith:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body style="display: flex; justify-content: center; flex-wrap: wrap;">
+  <div class="canvas-wrapper">
+      <canvas id="canvas" width="860" height="640" style="border: 1px solid black"></canvas>
+    </div>
+      <div class="filters">
+        
+        <div class="form">
+          <input type="file" name="file" id="fileUpload" class="inputfile">
+        </div><br/>
+        <div class="paski">
+          <label>Jasność</label>
+          <input type="range" id="contrast" min="0" max="50"  step="1" value="0" onchange="brightness(this.value)">
+      
+          <label>Nasycenie</label>
+          <input type="range" id="contrast" min="0" max="360"  step="6" value="0" onchange="hue(this.value)">
+     
+          <label>Szarość</label>
+          <input type="range" id="grayscale" min="0" max="100" step="1" value="0" onchange="grayscale(this.value)">
+    
+          <label>Saturacja</label>
+          <input type="range" id="blur" min="1" max="100"  step="1" value="0" onchange="saturate(this.value)">
+       
+          <label>Sepia</label>
+          <input type="range" id="sepia" min="0" max="100"  step="1" value="0" onchange="sepia(this.value)">
+        
+       
+          <label>Kontrast</label>
+          <input type="range" id="contrast" min="1" max="200"  step="1" value="0" onchange="contrast(this.value)">
+        </div>
+      </div>
+      <div class="img-none">
+        <img id="source" src="" />
+      </div>
+    <script src="script.js">
+    </script>
+  </body>
+</html>
